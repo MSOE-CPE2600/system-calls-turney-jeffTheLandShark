@@ -1,6 +1,11 @@
 /*
  * @file info.c
  * @brief Prints system information
+ *
+ * Author: Leigh Goetsch
+ * Course: CPE 2600
+ * Seciton: 121
+ * Assignment: Lab 9
  */
 
 #include <stdio.h>

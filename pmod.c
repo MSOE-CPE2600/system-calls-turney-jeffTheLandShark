@@ -2,6 +2,11 @@
  * @file pmod.c
  * @brief This program modifies its own priority to reduce it by 10, sleeps for
  * 1,837,272,638 nano seconds, prints a goodbye message, and exits.
+ *
+ * Author: Leigh Goetsch
+ * Course: CPE 2600
+ * Seciton: 121
+ * Assignment: Lab 9
  */
 
 #include <stdio.h>

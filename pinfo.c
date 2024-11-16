@@ -1,6 +1,11 @@
 /*
  * @file pinfo.c
  * @brief Prints the priority and scheduling method of a process
+ *
+ * Author: Leigh Goetsch
+ * Course: CPE 2600
+ * Seciton: 121
+ * Assignment: Lab 9
  */
 
 #define _GNU_SOURCE
