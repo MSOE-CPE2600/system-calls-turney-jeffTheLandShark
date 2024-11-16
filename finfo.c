@@ -40,21 +40,29 @@ int main(int argc, char *argv[]) {
   }
 
   // print file type
-  if (S_ISREG(file_info.st_mode)) {
+  switch (file_info.st_mode) {
+  case S_IFREG:
     printf("File type: Regular file\n");
-  } else if (S_ISDIR(file_info.st_mode)) {
+    break;
+  case S_IFDIR:
     printf("File type: Directory\n");
-  } else if (S_ISCHR(file_info.st_mode)) {
+    break;
+  case S_IFCHR:
     printf("File type: Character device\n");
-  } else if (S_ISBLK(file_info.st_mode)) {
+    break;
+  case S_IFBLK:
     printf("File type: Block device\n");
-  } else if (S_ISFIFO(file_info.st_mode)) {
-    printf("File type: FIFO/pipe\n");
-  } else if (S_ISLNK(file_info.st_mode)) {
+    break;
+  case S_IFIFO:
+    printf("File type: FIFO\n");
+    break;
+  case S_IFLNK:
     printf("File type: Symbolic link\n");
-  } else if (S_ISSOCK(file_info.st_mode)) {
+    break;
+  case S_IFSOCK:
     printf("File type: Socket\n");
-  } else {
+    break;
+  default:
     printf("File type: Unknown\n");
   }
 
