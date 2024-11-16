@@ -2,6 +2,11 @@
  * @file finfo.c
  * @brief This program displays the file information about a given file provided
  * via the command line.
+ * 
+ * Author: Leigh Goetsch
+ * Course: CPE 2600
+ * Seciton: 121
+ * Assignment: Lab 9
  */
 
 #include <stdio.h>
@@ -40,7 +45,7 @@ int main(int argc, char *argv[]) {
   }
 
   // print file type
-  switch (file_info.st_mode) {
+  switch (file_info.st_mode & S_IFMT) {
   case S_IFREG:
     printf("File type: Regular file\n");
     break;
@@ -63,7 +68,7 @@ int main(int argc, char *argv[]) {
     printf("File type: Socket\n");
     break;
   default:
-    printf("File type: Unknown\n");
+    printf("File type: Unknown - st_mode = %d\n", file_info.st_mode);
   }
 
   // print permissions
